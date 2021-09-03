@@ -2,6 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
-import "./style.css";
+import { ContextProvider } from './Context';
 
-ReactDOM.render(<App/> , document.getElementById('root'));
+import './styles.css';
+
+ReactDOM.render(
+  <ContextProvider>
+    <App />
+  </ContextProvider>,
+  document.getElementById('root'),
+);
